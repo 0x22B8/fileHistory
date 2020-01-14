@@ -23,7 +23,7 @@ if [ -d $HISTDIR ]
 # новой версии удаляется самая старая версия файла в этой директории
     if [ $? -ne 0 ]
       then
-      if [ $(ls|wc -w) -gt 24  ]
+      if [ $(ls|wc -l) -gt 24  ]
         then
         rm $(ls -tr|head -n1)
       fi
